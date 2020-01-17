@@ -47,6 +47,7 @@ export default {
 @deep: ~">>>";
 .login-content {
   background: #fff;
+  min-height: 1300px;
   .header {
     width: 100%;
     @{deep} .van-nav-bar__title {

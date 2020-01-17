@@ -40,10 +40,11 @@ import {
   Switch,
   Grid,
   GridItem,
-  NoticeBar
+  NoticeBar,
+  Uploader 
 } from "vant";
 
-
+Vue.use(Uploader);
 Vue.use(NoticeBar);
 Vue.use(Grid).use(GridItem);
 Vue.use(Panel);

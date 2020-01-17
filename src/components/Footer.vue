@@ -6,16 +6,22 @@
     <van-tabbar-item icon="friends" to="/recruitMsg" class="item">
       <span class="text">招工信息</span>
     </van-tabbar-item>
-    <van-tabbar-item class="item release">
+    <van-tabbar-item class="item release" @click="showMask">
       <van-button type="info" class="addBtn">
         <van-icon name="plus" class="plus" />
       </van-button>
       <span class="text">发布信息</span>
+      <div class="mask" v-show="showBlock">
+        <div class="mask-content">
+          <div @click="sendMsg(0)">发布招工信息</div>
+          <div @click="sendMsg(1)">发布找活名片</div>
+        </div>
+      </div>
     </van-tabbar-item>
     <van-tabbar-item icon="comment" to="/workerLook" class="item">
       <span class="text">工人找活</span>
     </van-tabbar-item>
-    <van-tabbar-item icon="manager" to="/user" class="item">
+    <van-tabbar-item icon="manager" :to="token?'/personal':'/login'" class="item">
       <span class="text">个人</span>
     </van-tabbar-item>
   </van-tabbar>
@@ -25,8 +31,27 @@
 export default {
   data() {
     return {
-      active: 0
+      active: 0,
+      showBlock: false,
+      token: ""
     };
+  },
+  created() {
+    localStorage.setItem("token", "1223234f");
+    this.token = localStorage.getItem("token");
+  },
+  methods: {
+    showMask() {
+      this.showBlock = !this.showBlock;
+      console.log("dpwd0", 1111);
+    },
+    sendMsg(index){
+      if(index==0){
+        this.$router.push('/sendRecruit');
+      }else{
+        this.$router.push('/sendLookWork');
+      }
+    }
   }
 };
 </script>
@@ -76,6 +101,29 @@ export default {
       position: absolute;
       left: 0;
       bottom: 10px;
+    }
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(223, 219, 219, 0.8);
+      z-index: 300;
+      .mask-content {
+        position: absolute;
+        bottom: 200px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        & > div {
+          flex: 1;
+          background: #000;
+          color: #fff;
+          text-align: center;
+          line-height: 60px;
+        }
+      }
     }
   }
 }

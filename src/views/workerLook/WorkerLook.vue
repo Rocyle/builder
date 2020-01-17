@@ -77,7 +77,7 @@ export default {
         { text: "个人", value: "b" },
         { text: "班头", value: "c" }
       ],
-         option4: [
+      option4: [
         { text: "默认排序", value: "recomment" },
         { text: "最新", value: "b" },
         { text: "推荐", value: "c" }
@@ -119,8 +119,9 @@ export default {
 
 <style lang="less" scoped>
 @deep: ~">>>";
-.worker-look{
+.worker-look {
   padding-top: 180px;
+  padding-bottom: 120px;
   .header-nav {
     width: 100%;
     position: fixed;
