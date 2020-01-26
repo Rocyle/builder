@@ -19,7 +19,7 @@
           label="详情"
           type="textarea"
           maxlength="500"
-          placeholder="请输入详情"
+          placeholder="请输入详情（如招工要求、工作内容、工资待遇、结款方式/周期等），有助于您更快、更准确的招到好工人~"
           show-word-limit
         />
       </div>
@@ -28,6 +28,7 @@
           上传图片
           <span>(可以不上传)</span>
         </h4>
+        <p>可上传工地现场照片、工程图纸、承包合同等</p>
         <van-uploader v-model="fileList" multiple />
       </div>
     </div>
@@ -106,30 +107,36 @@ export default {
       box-shadow: 2px 2px 5px 5px #ccc;
       padding: 20px 0;
       h4 {
-        font-size: 26px;
+        font-size: 30px;
         text-align: center;
         font-weight: normal;
-        line-height: 40px;
+        line-height: 80px;
+        border-bottom: 1px dotted #ccc; 
         span {
           color: #f00;
         }
+      }
+      p{
+        font-size: 24px;
+        line-height: 60px;
+        text-align: center;
       }
       .van-uploader {
         padding-top: 5px;
       }
     }
   }
-  .confirm-btn{
-      display: block;
-      margin-top: 40px;
-      width: 400px;
+  .confirm-btn {
+    display: block;
+    margin-top: 40px;
+    width: 500px;
     //   height: 60px;
-      line-height: 80px;
-      text-align: center;
-      color: #fff;
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0 auto;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 auto;
   }
 }
 </style>

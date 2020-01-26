@@ -114,7 +114,7 @@ export default {
 @deep: ~">>>";
 .recruit-message {
   padding-top: 180px;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   .header-nav {
     width: 100%;
     position: fixed;

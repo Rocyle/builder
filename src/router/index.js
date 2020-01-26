@@ -44,6 +44,24 @@ const routes = [
     path: "/sendLookWork",
     component: () => import(/* webpackChunkName: "about" */'../views/sendLookWork/SendLookWork.vue')
   },
+  {//发布找工基础信息
+    path: "/workBaseMsg",
+    component: () => import(/* webpackChunkName: "about" */'../views/workBaseMsg/WorkBaseMsg.vue')
+  },
+  {//发布人员信息
+    path: "/addIntroduce",
+    component: () => import(/* webpackChunkName: "about" */'../views/addIntroduce/AddIntroduce.vue')
+  },
+  {//发布工作经验
+    path: "/workExperience",
+    component: () => import(/* webpackChunkName: "about" */'../views/workExperience/WorkExperience.vue')
+  }, {//热门资讯展示
+    path: "/hotNews",
+    component: () => import(/* webpackChunkName: "about" */'../views/hotNews/HotNews.vue')
+  }, {//热门资讯详情
+    path: "/newsDetail",
+    component: () => import(/* webpackChunkName: "about" */'../views/newsDetail/NewsDetail.vue')
+  },
   {
     path: "*",
     component: () => import("@/components/NotFound")

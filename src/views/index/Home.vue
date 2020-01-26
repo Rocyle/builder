@@ -15,17 +15,22 @@
     </div>
     <!-- 菜单部分 -->
     <van-grid>
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
-      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="建筑招工" />
+      <van-grid-item icon="photo-o" text="装修招工" />
+      <van-grid-item icon="photo-o" text="焊工招工" />
+      <van-grid-item icon="photo-o" text="工厂招工" />
     </van-grid>
     <!-- 咨询部分 -->
     <div class="advert">
       <div class="share">邀请好友</div>
-      <div class="information">热门资讯</div>
+      <div class="information" @click="toNews">热门资讯</div>
     </div>
-    <van-notice-bar scrollable color="#1989fa" background="#ecf9ff" left-icon="info-o">通知内容四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名</van-notice-bar>
+    <van-notice-bar
+      scrollable
+      color="#1989fa"
+      background="#ecf9ff"
+      left-icon="info-o"
+    >通知内容四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名四川成都需要补烂做防水师傅两名</van-notice-bar>
     <!-- 招工信息 -->
     <div class="msg-content">
       <div class="recruit">
@@ -107,6 +112,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toNews() {
+      this.$router.push("/hotNews");
+    }
   }
 };
 </script>
@@ -140,7 +150,6 @@ export default {
       text-align: center;
       font-size: 28px;
       margin-bottom: 10px;
-
     }
     .share {
       border-right: 1px solid #ccc;
