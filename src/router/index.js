@@ -22,45 +22,61 @@ const routes = [
   },
   {//登录界面
     path: "/login",
-    component: () => import(/* webpackChunkName: "about" */'../views/login/Login.vue')
+    component: () => import(/* webpackChunkName: "login" */'../views/login/Login.vue')
   },
   {//招工信息界面
     path: "/recruitMsg",
-    component: () => import(/* webpackChunkName: "about" */'../views/recruitMsg/RecruitMsg.vue')
+    component: () => import(/* webpackChunkName: "recruitMsg" */'../views/recruitMsg/RecruitMsg.vue')
   },
   {//工人找活界面
     path: "/workerLook",
-    component: () => import(/* webpackChunkName: "about" */'../views/workerLook/WorkerLook.vue')
+    component: () => import(/* webpackChunkName: "workerLook" */'../views/workerLook/WorkerLook.vue')
   },
   {//个人中心界面
     path: "/personal",
-    component: () => import(/* webpackChunkName: "about" */'../views/personal/Personal.vue')
+    component: () => import(/* webpackChunkName: "personal" */'../views/personal/Personal.vue')
   },
   {//发布招工信息
     path: "/sendRecruit",
-    component: () => import(/* webpackChunkName: "about" */'../views/sendRecruit/SendRecruit.vue')
+    component: () => import(/* webpackChunkName: "sendRecruit" */'../views/sendRecruit/SendRecruit.vue')
   },
   {//发布找工信息
     path: "/sendLookWork",
-    component: () => import(/* webpackChunkName: "about" */'../views/sendLookWork/SendLookWork.vue')
+    component: () => import(/* webpackChunkName: "sendLookWork" */'../views/sendLookWork/SendLookWork.vue')
   },
   {//发布找工基础信息
     path: "/workBaseMsg",
-    component: () => import(/* webpackChunkName: "about" */'../views/workBaseMsg/WorkBaseMsg.vue')
+    component: () => import(/* webpackChunkName: "workBaseMsg" */'../views/workBaseMsg/WorkBaseMsg.vue')
   },
   {//发布人员信息
     path: "/addIntroduce",
-    component: () => import(/* webpackChunkName: "about" */'../views/addIntroduce/AddIntroduce.vue')
+    component: () => import(/* webpackChunkName: "addIntroduce" */'../views/addIntroduce/AddIntroduce.vue')
   },
   {//发布工作经验
     path: "/workExperience",
-    component: () => import(/* webpackChunkName: "about" */'../views/workExperience/WorkExperience.vue')
-  }, {//热门资讯展示
+    component: () => import(/* webpackChunkName: "workExperience" */'../views/workExperience/WorkExperience.vue')
+  },
+  {//热门资讯展示
     path: "/hotNews",
-    component: () => import(/* webpackChunkName: "about" */'../views/hotNews/HotNews.vue')
-  }, {//热门资讯详情
+    component: () => import(/* webpackChunkName: "hotNews" */'../views/hotNews/HotNews.vue')
+  },
+  {//热门资讯详情
     path: "/newsDetail",
-    component: () => import(/* webpackChunkName: "about" */'../views/newsDetail/NewsDetail.vue')
+    component: () => import(/* webpackChunkName: "newsDetail" */'../views/newsDetail/NewsDetail.vue')
+  },
+  {//招工信息详情
+    path: "/zhaogongMsg",
+    component: () => import(/* webpackChunkName: "zhaogongMsg" */'../views/zhaogongMsg/ZhaogongMsg.vue')
+  }, {//找活信息详情
+    path: "/zhaohuoMsg",
+    component: () => import(/* webpackChunkName: "zhaohuoMsg" */'../views/zhaohuoMsg/ZhaohuoMsg.vue')
+  },
+  {//关于我们的页面
+    path: "/aboutUs",
+    component: () => import(/* webpackChunkName: "aboutUs" */'../views/aboutUs/AboutUs.vue')
+  }, {//举报信息的页面
+    path: "/inform",
+    component: () => import(/* webpackChunkName: "inform" */'../views/inform/Inform.vue')
   },
   {
     path: "*",

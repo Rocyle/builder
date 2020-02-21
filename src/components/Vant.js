@@ -41,7 +41,7 @@ import {
   Grid,
   GridItem,
   NoticeBar,
-  Uploader 
+  Uploader,
 } from "vant";
 
 Vue.use(Uploader);
